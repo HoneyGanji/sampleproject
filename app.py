@@ -1,8 +1,8 @@
-from flask import Flask
+from flask import Flask,render_templates
 app=Flask(__name__)
 @app.route("/")
 def index():
-    return "Welcome to MRECW"
+    return render_templates("index.html")
 @app.route("/home")
 def home():
     return "home page"
